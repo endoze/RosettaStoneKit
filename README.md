@@ -4,7 +4,7 @@ RosettaStoneKit is a magical Object Mapping framework. It converts dictionaries
 and arrays of data into instances of any classes. It can also convert your
 custom objects into dictionaries and arrays.
 
-[![Build Status](https://travis-ci.org/endoze/RosettaStoneKit.svg?branch=master)](https://travis-ci.org/endoze/RosettaStoneKit)
+[![Build Status](https://travis-ci.org/endoze/RosettaStoneKit.svg)](https://travis-ci.org/endoze/RosettaStoneKit)
 
 ## Motivation
 

@@ -28,11 +28,13 @@
         </ul>
       </header>
       <section>
-        <p><img src="https://raw.githubusercontent.com/endoze/RosettaStoneKit/4d82b6268aae692aa6f3f34f8198fb37bc5cb5c5/RosettaStoneKitWithText.png" alt="RosettaStoneKitLogo"></p>
+        <p><img src="RosettaStoneKitWithText.png" alt="RosettaStoneKitLogo"></p>
 
 <p>RosettaStoneKit is a magical Object Mapping framework. It converts dictionaries
 and arrays of data into instances of any classes. It can also convert your
 custom objects into dictionaries and arrays.</p>
+
+<p><a href="https://travis-ci.org/endoze/RosettaStoneKit"><img src="https://travis-ci.org/endoze/RosettaStoneKit.svg" alt="Build Status"></a></p>
 
 <h2>
 <a id="motivation" class="anchor" href="#motivation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Motivation</h2>
@@ -46,97 +48,126 @@ do it very well. This framework doesn't include networking code or any other
 features.</p>
 
 <h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<h3>
+<a id="carthage" class="anchor" href="#carthage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Carthage</h3>
+
+<p>Add the following to your Cartfile:</p>
+
+<pre><code>github "Endoze/RosettaStoneKit" ~&gt; 1.0
+</code></pre>
+
+<p>Then add the framework as a linked framework.</p>
+
+<h3>
+<a id="cocoapods" class="anchor" href="#cocoapods" aria-hidden="true"><span class="octicon octicon-link"></span></a>CocoaPods</h3>
+
+<p>Add the following to your Podfile:</p>
+
+<pre><code>pod 'RosettaStoneKit', '~&gt; 1.0'
+</code></pre>
+
+<p>Then run <code>pod install</code></p>
+
+<h2>
 <a id="show-me-the-code" class="anchor" href="#show-me-the-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Show me the code</h2>
 
 <div class="highlight highlight-objective-c"><pre><span class="pl-c">// User.h</span>
 
-<span class="pl-st">@interface</span> <span class="pl-en">User</span>
+<span class="pl-k">@interface</span> <span class="pl-en">User</span>
 
-<span class="pl-k">@property</span> (<span class="pl-k">nonatomic</span>, <span class="pl-k">copy</span>) <span class="pl-s3">NSString</span> *firstName;
-<span class="pl-k">@property</span> (<span class="pl-k">nonatomic</span>, <span class="pl-k">strong</span>) <span class="pl-s3">NSNumber</span> *userId;
-<span class="pl-k">@property</span> (<span class="pl-k">nonatomic</span>, <span class="pl-k">strong</span>) <span class="pl-s3">NSDate</span> *birthday;
-<span class="pl-k">@property</span> (<span class="pl-k">nonatomic</span>, <span class="pl-k">strong</span>) <span class="pl-s3">NSString</span> *lastName;
+<span class="pl-k">@property</span> (<span class="pl-k">nonatomic</span>, <span class="pl-k">copy</span>)   <span class="pl-c1">NSString</span> *firstName;
+<span class="pl-k">@property</span> (<span class="pl-k">nonatomic</span>, <span class="pl-k">strong</span>) <span class="pl-c1">NSNumber</span> *userId;
+<span class="pl-k">@property</span> (<span class="pl-k">nonatomic</span>, <span class="pl-k">strong</span>) <span class="pl-c1">NSDate</span> *birthday;
+<span class="pl-k">@property</span> (<span class="pl-k">nonatomic</span>, <span class="pl-k">strong</span>) <span class="pl-c1">NSString</span> *lastName;
 
-<span class="pl-st">@end</span></pre></div>
+<span class="pl-k">@end</span></pre></div>
 
 <div class="highlight highlight-objective-c"><pre><span class="pl-c">// Elsewhere</span>
 
-<span class="pl-s3">NSDictionary</span> *userDictionary = @{
-  <span class="pl-s1"><span class="pl-pds">@"</span>firstName<span class="pl-pds">"</span></span>: <span class="pl-s1"><span class="pl-pds">@"</span>Joe<span class="pl-pds">"</span></span>,
-  <span class="pl-s1"><span class="pl-pds">@"</span>userId<span class="pl-pds">"</span></span>: <span class="pl-c1">42</span>,
-  <span class="pl-s1"><span class="pl-pds">@"</span>birthday<span class="pl-pds">"</span></span>: <span class="pl-s1"><span class="pl-pds">@"</span>1970-01-01T00:00:00.000Z<span class="pl-pds">"</span></span>,
-  <span class="pl-s1"><span class="pl-pds">@"</span>lastName<span class="pl-pds">"</span></span>: <span class="pl-s1"><span class="pl-pds">@"</span>User<span class="pl-pds">"</span></span>
+<span class="pl-c1">NSDictionary</span> *userDictionary = @{
+  <span class="pl-s"><span class="pl-pds">@"</span>firstName<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">@"</span>Joe<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">@"</span>userId<span class="pl-pds">"</span></span>: <span class="pl-c1">42</span>,
+  <span class="pl-s"><span class="pl-pds">@"</span>birthday<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">@"</span>1970-01-01T00:00:00.000Z<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">@"</span>lastName<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">@"</span>User<span class="pl-pds">"</span></span>
 };
 
-RosettaStone *stone = [RosettaStone <span class="pl-s3">sharedInstance</span>];
+RosettaStone *stone = [RosettaStone <span class="pl-c1">sharedInstance</span>];
 
-User *joeUser = [stone <span class="pl-s3">translate:</span>userDictionary <span class="pl-s3">toClass:</span>[User <span class="pl-s3">class</span>]];</pre></div>
+User *joeUser = [stone <span class="pl-c1">translate:</span>userDictionary <span class="pl-c1">toClass:</span>[User <span class="pl-c1">class</span>]];</pre></div>
 
 <h3>
 <a id="when-things-arent-so-perfect" class="anchor" href="#when-things-arent-so-perfect" aria-hidden="true"><span class="octicon octicon-link"></span></a>When things aren’t so perfect</h3>
 
 <div class="highlight highlight-objective-c"><pre><span class="pl-c">// Team.h</span>
 
-<span class="pl-st">@interface</span> <span class="pl-en">Team</span>
+<span class="pl-k">@interface</span> <span class="pl-en">Team</span>
 
-<span class="pl-k">@property</span> (<span class="pl-k">nonatomic</span>, <span class="pl-k">copy</span>) <span class="pl-s3">NSString</span> *name;
-<span class="pl-k">@property</span> (<span class="pl-k">nonatomic</span>, <span class="pl-k">strong</span>) <span class="pl-s3">NSNumber</span> *teamNumber;
-<span class="pl-k">@property</span> (<span class="pl-k">nonatomic</span>, <span class="pl-k">strong</span>) <span class="pl-s3">NSArray</span> *games;
+<span class="pl-k">@property</span> (<span class="pl-k">nonatomic</span>, <span class="pl-k">copy</span>)   <span class="pl-c1">NSString</span> *name;
+<span class="pl-k">@property</span> (<span class="pl-k">nonatomic</span>, <span class="pl-k">strong</span>) <span class="pl-c1">NSNumber</span> *teamNumber;
+<span class="pl-k">@property</span> (<span class="pl-k">nonatomic</span>, <span class="pl-k">strong</span>) <span class="pl-c1">NSArray</span> *games;
 
-<span class="pl-st">@end</span></pre></div>
+<span class="pl-k">@end</span></pre></div>
 
 <div class="highlight highlight-objective-c"><pre><span class="pl-c">// Elsewhere</span>
 
-<span class="pl-s3">NSDictionary</span> *teamDictionary = @{
-  <span class="pl-s1"><span class="pl-pds">@"</span>name<span class="pl-pds">"</span></span>: <span class="pl-s1"><span class="pl-pds">@"</span>Piggers<span class="pl-pds">"</span></span>,
-  <span class="pl-s1"><span class="pl-pds">@"</span>number<span class="pl-pds">"</span></span>: <span class="pl-c1">42</span>,
-  <span class="pl-s1"><span class="pl-pds">@"</span>games<span class="pl-pds">"</span></span>: @[
-    @{ <span class="pl-s1"><span class="pl-pds">@"</span>name<span class="pl-pds">"</span></span>: <span class="pl-s1"><span class="pl-pds">@"</span>Table Hocky championships<span class="pl-pds">"</span></span>},
-    @{ <span class="pl-s1"><span class="pl-pds">@"</span>name<span class="pl-pds">"</span></span>: <span class="pl-s1"><span class="pl-pds">@"</span>Ping Pong championships<span class="pl-pds">"</span></span>}
+<span class="pl-c1">NSDictionary</span> *teamDictionary = @{
+  <span class="pl-s"><span class="pl-pds">@"</span>name<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">@"</span>Piggers<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">@"</span>number<span class="pl-pds">"</span></span>: <span class="pl-c1">42</span>,
+  <span class="pl-s"><span class="pl-pds">@"</span>games<span class="pl-pds">"</span></span>: @[
+    @{<span class="pl-s"><span class="pl-pds">@"</span>name<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">@"</span>Table Hocky championships<span class="pl-pds">"</span></span>},
+    @{<span class="pl-s"><span class="pl-pds">@"</span>name<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">@"</span>Ping Pong championships<span class="pl-pds">"</span></span>}
   ]
 };
 
-RosettaStone *stone = [RosettaStone <span class="pl-s3">sharedInstance</span>];
+RosettaStone *stone = [RosettaStone <span class="pl-c1">sharedInstance</span>];
 
-PropertyTranslator *numberTranslator = [propertyTranslatorForClass:[Team <span class="pl-s3">class</span>] <span class="pl-s3">fromKey:</span><span class="pl-s1"><span class="pl-pds">@"</span>number<span class="pl-pds">"</span></span> <span class="pl-s3">toProperty:</span><span class="pl-s1"><span class="pl-pds">@"</span>teamNumber<span class="pl-pds">"</span></span>];
-PropertyTranslator *gamesTranslator = [propertyTranslatorForClass:[Team <span class="pl-s3">class</span>] <span class="pl-s3">fromArrayKey:</span><span class="pl-s1"><span class="pl-pds">@"</span>games<span class="pl-pds">"</span></span> <span class="pl-s3">toArrayProperty:</span><span class="pl-s1"><span class="pl-pds">@"</span>games<span class="pl-pds">"</span></span> <span class="pl-s3">withClass:</span>[Game <span class="pl-s3">class</span>]];
+PropertyTranslator *numberTranslator = [propertyTranslatorForClass:[Team <span class="pl-c1">class</span>]
+                                                           fromKey:<span class="pl-s"><span class="pl-pds">@"</span>number<span class="pl-pds">"</span></span>
+                                                        toProperty:<span class="pl-s"><span class="pl-pds">@"</span>teamNumber<span class="pl-pds">"</span></span>];
+PropertyTranslator *gamesTranslator = [propertyTranslatorForClass:[Team <span class="pl-c1">class</span>]
+                                                     fromArrayKey:<span class="pl-s"><span class="pl-pds">@"</span>games<span class="pl-pds">"</span></span>
+                                                  toArrayProperty:<span class="pl-s"><span class="pl-pds">@"</span>games<span class="pl-pds">"</span></span>
+                                                        withClass:[Game <span class="pl-c1">class</span>]];
 
-[stone <span class="pl-s3">registerPropertyTranslator:</span>numberTranslator];
-[stone <span class="pl-s3">registerPropertyTranslator:</span>gamesTranslator];
+[stone <span class="pl-c1">registerPropertyTranslator:</span>numberTranslator];
+[stone <span class="pl-c1">registerPropertyTranslator:</span>gamesTranslator];
 
-Team *piggers = [stone <span class="pl-s3">translate:</span>teamDictionary <span class="pl-s3">toClass:</span>[Team <span class="pl-s3">class</span>]];</pre></div>
+Team *piggers = [stone <span class="pl-c1">translate:</span>teamDictionary <span class="pl-c1">toClass:</span>[Team <span class="pl-c1">class</span>]];</pre></div>
 
 <h3>
 <a id="when-you-really-need-to-change-stuff" class="anchor" href="#when-you-really-need-to-change-stuff" aria-hidden="true"><span class="octicon octicon-link"></span></a>When you really need to change stuff</h3>
 
 <div class="highlight highlight-objective-c"><pre><span class="pl-c">// Game.h</span>
 
-<span class="pl-st">typedef</span> <span class="pl-st">enum</span> : <span class="pl-st">NSUInteger</span> {
+<span class="pl-k">typedef</span> <span class="pl-k">enum</span> : <span class="pl-k">NSUInteger</span> {
   PingPongGameType,
   FoosballGameType,
   TableHockeyGameType,
   NoGameType,
 } GameType;
 
-<span class="pl-st">@interface</span> <span class="pl-en">Game</span>
+<span class="pl-k">@interface</span> <span class="pl-en">Game</span>
 
-<span class="pl-k">@property</span> (<span class="pl-k">nonatomic</span>, <span class="pl-k">copy</span>) <span class="pl-s3">NSString</span> *name;
+<span class="pl-k">@property</span> (<span class="pl-k">nonatomic</span>, <span class="pl-k">copy</span>) <span class="pl-c1">NSString</span> *name;
 <span class="pl-k">@property</span> (<span class="pl-k">nonatomic</span>) GameType type;
 
-<span class="pl-st">@end</span></pre></div>
+<span class="pl-k">@end</span></pre></div>
 
 <div class="highlight highlight-objective-c"><pre><span class="pl-c">// Elsewhere</span>
 
-<span class="pl-s3">NSDictionary</span> *gameDictionary = @{
-  <span class="pl-s1"><span class="pl-pds">@"</span>name<span class="pl-pds">"</span></span>: <span class="pl-s1"><span class="pl-pds">@"</span>FoosBall Championships<span class="pl-pds">"</span></span>,
-  <span class="pl-s1"><span class="pl-pds">@"</span>type<span class="pl-pds">"</span></span>: <span class="pl-c1">2</span>
+<span class="pl-c1">NSDictionary</span> *gameDictionary = @{
+  <span class="pl-s"><span class="pl-pds">@"</span>name<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">@"</span>FoosBall Championships<span class="pl-pds">"</span></span>,
+  <span class="pl-s"><span class="pl-pds">@"</span>type<span class="pl-pds">"</span></span>: <span class="pl-c1">2</span>
 };
 
-RosettaStone *stone = [RosettaStone <span class="pl-s3">sharedInstance</span>];
-PropertyTranslator *gameTypeTranslator = [propertyTranslatorForClass:[Game <span class="pl-s3">class</span>]
-                                                             fromKey:<span class="pl-s1"><span class="pl-pds">@"</span>type<span class="pl-pds">"</span></span> <span class="pl-s3">toProperty:</span><span class="pl-s1"><span class="pl-pds">@"</span>type<span class="pl-pds">"</span></span>
-                                               <span class="pl-s3">withInterpolatorBlock:</span>^<span class="pl-s3">id</span>(<span class="pl-st">id</span> propertyValue) {
-  <span class="pl-st">NSUInteger</span> number = [(<span class="pl-s3">NSNumber</span> *)propertyValue <span class="pl-s3">unsignedIntegerValue</span>];
+RosettaStone *stone = [RosettaStone <span class="pl-c1">sharedInstance</span>];
+PropertyTranslator *gameTypeTranslator = [propertyTranslatorForClass:[Game <span class="pl-c1">class</span>]
+                                                             fromKey:<span class="pl-s"><span class="pl-pds">@"</span>type<span class="pl-pds">"</span></span>
+                                                           toProperty:<span class="pl-s"><span class="pl-pds">@"</span>type<span class="pl-pds">"</span></span>
+                                               withInterpolatorBlock:^<span class="pl-c1">id</span>(<span class="pl-k">id</span> propertyValue) {
+  <span class="pl-k">NSUInteger</span> number = [(<span class="pl-c1">NSNumber</span> *)propertyValue <span class="pl-c1">unsignedIntegerValue</span>];
 
   <span class="pl-k">switch</span> (number) {
     <span class="pl-k">case</span> <span class="pl-c1">1</span>:
@@ -149,34 +180,34 @@ PropertyTranslator *gameTypeTranslator = [propertyTranslatorForClass:[Game <span
       <span class="pl-k">return</span> NoGameType;
   }
 }];
-[stone <span class="pl-s3">registerPropertyTranslator:</span>gameTypeTranslator];
+[stone <span class="pl-c1">registerPropertyTranslator:</span>gameTypeTranslator];
 
-Game *foosballChampionshipGame = [stone <span class="pl-s3">translate:</span>gameDictionary <span class="pl-s3">toClass:</span>[Game <span class="pl-s3">class</span>]];</pre></div>
+Game *foosballChampionshipGame = [stone <span class="pl-c1">translate:</span>gameDictionary <span class="pl-c1">toClass:</span>[Game <span class="pl-c1">class</span>]];</pre></div>
 
 <h3>
 <a id="converting-your-objects-into-dictionaries" class="anchor" href="#converting-your-objects-into-dictionaries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Converting your objects into dictionaries</h3>
 
 <div class="highlight highlight-objective-c"><pre><span class="pl-c">// User.h</span>
 
-<span class="pl-st">@interface</span> <span class="pl-en">User</span>
+<span class="pl-k">@interface</span> <span class="pl-en">User</span>
 
-<span class="pl-k">@property</span> (<span class="pl-k">nonatomic</span>, <span class="pl-k">copy</span>) <span class="pl-s3">NSString</span> *firstName;
-<span class="pl-k">@property</span> (<span class="pl-k">nonatomic</span>, <span class="pl-k">strong</span>) <span class="pl-s3">NSNumber</span> *userId;
-<span class="pl-k">@property</span> (<span class="pl-k">nonatomic</span>, <span class="pl-k">strong</span>) <span class="pl-s3">NSDate</span> *birthday;
-<span class="pl-k">@property</span> (<span class="pl-k">nonatomic</span>, <span class="pl-k">strong</span>) <span class="pl-s3">NSString</span> *lastName;
+<span class="pl-k">@property</span> (<span class="pl-k">nonatomic</span>, <span class="pl-k">copy</span>)   <span class="pl-c1">NSString</span> *firstName;
+<span class="pl-k">@property</span> (<span class="pl-k">nonatomic</span>, <span class="pl-k">strong</span>) <span class="pl-c1">NSNumber</span> *userId;
+<span class="pl-k">@property</span> (<span class="pl-k">nonatomic</span>, <span class="pl-k">strong</span>) <span class="pl-c1">NSDate</span> *birthday;
+<span class="pl-k">@property</span> (<span class="pl-k">nonatomic</span>, <span class="pl-k">strong</span>) <span class="pl-c1">NSString</span> *lastName;
 
-<span class="pl-st">@end</span></pre></div>
+<span class="pl-k">@end</span></pre></div>
 
 <div class="highlight highlight-objective-c"><pre><span class="pl-c">// Elsewhere</span>
 
-User *joeUser = [User <span class="pl-s3">new</span>];
-joeUser.firstName = <span class="pl-s1"><span class="pl-pds">@"</span>Joe<span class="pl-pds">"</span></span>;
+User *joeUser = [User <span class="pl-c1">new</span>];
+joeUser.firstName = <span class="pl-s"><span class="pl-pds">@"</span>Joe<span class="pl-pds">"</span></span>;
 joeUser.userId = @<span class="pl-c1">2</span>;
-joeUser.lastName = <span class="pl-s1"><span class="pl-pds">@"</span>User<span class="pl-pds">"</span></span>;
+joeUser.lastName = <span class="pl-s"><span class="pl-pds">@"</span>User<span class="pl-pds">"</span></span>;
 
-RosettaStone *stone = [RosettaStone <span class="pl-s3">sharedInstance</span>];
+RosettaStone *stone = [RosettaStone <span class="pl-c1">sharedInstance</span>];
 
-<span class="pl-s3">NSDictionary</span> *joeUserDictionary = [stone <span class="pl-s3">translateToDictionary:</span>joeUser];</pre></div>
+<span class="pl-c1">NSDictionary</span> *joeUserDictionary = [stone <span class="pl-c1">translateToDictionary:</span>joeUser];</pre></div>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/endoze">endoze</a></p>

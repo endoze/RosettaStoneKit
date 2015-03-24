@@ -46,7 +46,7 @@ Then run `pod install`
 
 @interface User
 
-@property (nonatomic, copy) NSString *firstName;
+@property (nonatomic, copy)   NSString *firstName;
 @property (nonatomic, strong) NSNumber *userId;
 @property (nonatomic, strong) NSDate *birthday;
 @property (nonatomic, strong) NSString *lastName;
@@ -76,7 +76,7 @@ User *joeUser = [stone translate:userDictionary toClass:[User class]];
 
 @interface Team
 
-@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy)   NSString *name;
 @property (nonatomic, strong) NSNumber *teamNumber;
 @property (nonatomic, strong) NSArray *games;
 
@@ -90,15 +90,20 @@ NSDictionary *teamDictionary = @{
   @"name": @"Piggers",
   @"number": 42,
   @"games": @[
-    @{ @"name": @"Table Hocky championships"},
-    @{ @"name": @"Ping Pong championships"}
+    @{@"name": @"Table Hocky championships"},
+    @{@"name": @"Ping Pong championships"}
   ]
 };
 
 RosettaStone *stone = [RosettaStone sharedInstance];
 
-PropertyTranslator *numberTranslator = [propertyTranslatorForClass:[Team class] fromKey:@"number" toProperty:@"teamNumber"];
-PropertyTranslator *gamesTranslator = [propertyTranslatorForClass:[Team class] fromArrayKey:@"games" toArrayProperty:@"games" withClass:[Game class]];
+PropertyTranslator *numberTranslator = [propertyTranslatorForClass:[Team class]
+                                                           fromKey:@"number"
+                                                        toProperty:@"teamNumber"];
+PropertyTranslator *gamesTranslator = [propertyTranslatorForClass:[Team class]
+                                                     fromArrayKey:@"games"
+                                                  toArrayProperty:@"games"
+                                                        withClass:[Game class]];
 
 [stone registerPropertyTranslator:numberTranslator];
 [stone registerPropertyTranslator:gamesTranslator];
@@ -136,7 +141,8 @@ NSDictionary *gameDictionary = @{
 
 RosettaStone *stone = [RosettaStone sharedInstance];
 PropertyTranslator *gameTypeTranslator = [propertyTranslatorForClass:[Game class]
-                                                             fromKey:@"type" toProperty:@"type"
+                                                             fromKey:@"type"
+                                                           toProperty:@"type"
                                                withInterpolatorBlock:^id(id propertyValue) {
   NSUInteger number = [(NSNumber *)propertyValue unsignedIntegerValue];
 
@@ -163,7 +169,7 @@ Game *foosballChampionshipGame = [stone translate:gameDictionary toClass:[Game c
 
 @interface User
 
-@property (nonatomic, copy) NSString *firstName;
+@property (nonatomic, copy)   NSString *firstName;
 @property (nonatomic, strong) NSNumber *userId;
 @property (nonatomic, strong) NSDate *birthday;
 @property (nonatomic, strong) NSString *lastName;

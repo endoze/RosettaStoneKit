@@ -16,6 +16,29 @@ object with additional methods. And finally, the intent is to do one thing and
 do it very well. This framework doesn't include networking code or any other
 features.
 
+## Installation
+
+### Carthage
+
+Add the following to your Cartfile:
+
+```
+github "Endoze/RosettaStoneKit" ~> 1.0
+```
+
+Then add the framework as a linked framework.
+
+### CocoaPods
+
+Add the following to your Podfile:
+
+```
+pod 'RosettaStoneKit', '~> 1.0'
+```
+
+Then run `pod install`
+
+
 ## Show me the code
 
 ```objective-c

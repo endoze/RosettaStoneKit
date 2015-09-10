@@ -26,7 +26,9 @@
 
 #import <Foundation/Foundation.h>
 
-typedef id(^ValueInterpolatorBlock)(id propertyValue);
+NS_ASSUME_NONNULL_BEGIN
+
+typedef _Nullable id(^ ValueInterpolatorBlock)(id propertyValue);
 
 @interface PropertyTranslator : NSObject
 
@@ -49,13 +51,13 @@ typedef id(^ValueInterpolatorBlock)(id propertyValue);
  @brief This block can be used to convert the value pulled out of a dictionary before being
         assigned to an object's property.
  */
-@property (nonatomic, copy) ValueInterpolatorBlock valueInterpolatorBlock;
+@property (nonatomic, copy, nullable) ValueInterpolatorBlock valueInterpolatorBlock;
 
 /*!
  @brief This block can be used to convert the value returned from an object's property before
         being assigned to a dictionary's key.
  */
-@property (nonatomic, copy) ValueInterpolatorBlock reverseInterpolatorBlock;
+@property (nonatomic, copy, nullable) ValueInterpolatorBlock reverseInterpolatorBlock;
 
 /*!
  @brief This is a convenience method to return a new property translator based on the method parameters.
@@ -74,12 +76,14 @@ typedef id(^ValueInterpolatorBlock)(id propertyValue);
  @brief This is a convenience method to return a new property translator based on the method parameters.
  @return PropertyTranslator
  */
-+ (instancetype)propertyTranslatorForClass:(Class)klass fromKey:(NSString *)key toProperty:(NSString *)propertyName withInterpolatorBlock:(ValueInterpolatorBlock)valueInterpolatorBlock;
++ (instancetype)propertyTranslatorForClass:(Class)klass fromKey:(NSString *)key toProperty:(NSString *)propertyName withInterpolatorBlock:(nullable ValueInterpolatorBlock)valueInterpolatorBlock;
 
 /*!
  @brief This is a convenience method to return a new property translator based on the method parameters.
  @return PropertyTranslator
  */
-+ (instancetype)propertyTranslatorForClass:(Class)klass fromKey:(NSString *)key toProperty:(NSString *)propertyName withInterpolatorBlock:(ValueInterpolatorBlock)valueInterpolatorBlock andReverseInterpolatorBlock:(ValueInterpolatorBlock)reverseInterpolatorBlock;
++ (instancetype)propertyTranslatorForClass:(Class)klass fromKey:(NSString *)key toProperty:(NSString *)propertyName withInterpolatorBlock:(nullable ValueInterpolatorBlock)valueInterpolatorBlock andReverseInterpolatorBlock:(nullable ValueInterpolatorBlock)reverseInterpolatorBlock;
 
 @end
+
+NS_ASSUME_NONNULL_END

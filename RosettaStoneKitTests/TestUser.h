@@ -29,9 +29,13 @@
 
 @class TestModel;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface TestUser : NSObject
 
 @property (nonatomic, strong) TestModel *testModel;
 @property (nonatomic, strong) NSArray *games;
 
 @end
+
+NS_ASSUME_NONNULL_END

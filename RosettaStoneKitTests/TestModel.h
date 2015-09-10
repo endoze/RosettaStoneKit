@@ -27,6 +27,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface TestModel : NSObject
 
 @property (nonatomic, copy) NSString *name;
@@ -37,3 +39,5 @@
 @property (nonatomic, assign) BOOL active;
 
 @end
+
+NS_ASSUME_NONNULL_END

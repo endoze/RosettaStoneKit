@@ -26,6 +26,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface NSDictionary (Extensions)
 
 /*!
@@ -36,3 +38,5 @@
 - (BOOL)hasKey:(NSString *)targetKey;
 
 @end
+
+NS_ASSUME_NONNULL_END

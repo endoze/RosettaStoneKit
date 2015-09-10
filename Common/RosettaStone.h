@@ -28,6 +28,8 @@
 
 @class PropertyTranslator;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface RosettaStone : NSObject
 
 /*!
@@ -79,3 +81,5 @@
 - (NSArray *)translateArrayToDictionaries:(NSArray *)array;
 
 @end
+
+NS_ASSUME_NONNULL_END

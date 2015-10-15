@@ -33,6 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, strong) NSNumber *gameId;
+@property (nonatomic, strong) NSDate *date;
 
 @end
 

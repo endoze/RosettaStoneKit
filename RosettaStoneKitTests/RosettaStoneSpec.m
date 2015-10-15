@@ -96,6 +96,17 @@ SpecBegin(RosettaStoneSpec)
         TestUser *user = [stone translate:userDictionary toClass:[TestUser class]];
         expect([user.games firstObject]).to.beInstanceOf([Game class]);
       });
+
+      it(@"should translate dates from strings", ^{
+        NSString *dateString = @"2015-10-15T19:24:40.669Z";
+        NSDateFormatter *dateFormatter = [NSDateFormatter new];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"];
+        NSDate *date = [dateFormatter dateFromString:dateString];
+        RosettaStone *stone = [RosettaStone sharedInstance];
+        NSDictionary *gameDictionary = @{@"name": @"foosball championship", @"gameId": @11, @"date": dateString};
+        Game *game = [stone translate:gameDictionary toClass:[Game class]];
+        expect([game date]).to.equal(date);
+      });
     });
     
     describe(@"translateToDictionary:", ^{
@@ -164,6 +175,19 @@ SpecBegin(RosettaStoneSpec)
            @{@"name": @"ping pong championship", @"gameId": @11}
         ];
         expect(userDictionary[@"games"]).to.equal(games);
+      });
+
+      it(@"should translate dates to strings", ^{
+        RosettaStone *stone = [RosettaStone sharedInstance];
+        NSDate *now = [NSDate new];
+        NSDateFormatter *dateFormatter = [NSDateFormatter new];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"];
+        Game *game = [Game new];
+        game.name = @"foosball championship";
+        game.date = now;
+        game.gameId = @25;
+        NSDictionary *gameDictionary = [stone translateToDictionary:game];
+        expect([gameDictionary objectForKey:@"date"]).to.equal([dateFormatter stringFromDate:now]);
       });
     });
     

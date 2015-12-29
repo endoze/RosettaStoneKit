@@ -27,7 +27,7 @@ features.
 Add the following to your Cartfile:
 
 ```
-github "Endoze/RosettaStoneKit" ~> 1.0
+github "Endoze/RosettaStoneKit" ~> 1.2
 ```
 
 Then add the framework as a linked framework.
@@ -37,7 +37,7 @@ Then add the framework as a linked framework.
 Add the following to your Podfile:
 
 ```
-pod 'RosettaStoneKit', '~> 1.0'
+pod 'RosettaStoneKit', '~> 1.2'
 ```
 
 Then run `pod install`
@@ -60,6 +60,8 @@ Then run `pod install`
 
 ```objective-c
 // Elsewhere
+
+#import <RosettaStoneKit/RosettaStoneKit.h>
 
 NSDictionary *userDictionary = @{
   @"firstName": @"Joe",
@@ -89,6 +91,8 @@ User *joeUser = [stone translate:userDictionary toClass:[User class]];
 
 ```objective-c
 // Elsewhere
+
+#import <RosettaStoneKit/RosettaStoneKit.h>
 
 NSDictionary *teamDictionary = @{
   @"name": @"Piggers",
@@ -138,6 +142,8 @@ typedef enum : NSUInteger {
 ```objective-c
 // Elsewhere
 
+#import <RosettaStoneKit/RosettaStoneKit.h>
+
 NSDictionary *gameDictionary = @{
   @"name": @"FoosBall Championships",
   @"type": 2
@@ -183,6 +189,8 @@ Game *foosballChampionshipGame = [stone translate:gameDictionary toClass:[Game c
 
 ```objective-c
 // Elsewhere
+
+#import <RosettaStoneKit/RosettaStoneKit.h>
 
 User *joeUser = [User new];
 joeUser.firstName = @"Joe";

@@ -20,6 +20,18 @@ object with additional methods. And finally, the intent is to do one thing and
 do it very well. This framework doesn't include networking code or any other
 features.
 
+## Features
+
+- Small public API surface
+- Works with any subclass of NSObject
+- Customizeable via custom `PropertyTranslator`s
+- Converts Objects to `NSDictionary`s
+- Converts `NSDictionary` to Objects
+- Works on `NSArray`s of `NSDictionary`s
+- Well documented
+- Well tested
+- Support for Cocoapods/Carthage integration
+
 ## Installation
 
 ### Carthage

@@ -5,6 +5,10 @@ and arrays of data into instances of any classes. It can also convert your
 custom objects into dictionaries and arrays.
 
 [![Build Status](https://travis-ci.org/endoze/RosettaStoneKit.svg)](https://travis-ci.org/endoze/RosettaStoneKit)
+[![License](https://img.shields.io/cocoapods/l/RosettaStoneKit.svg?style=flat)](http://cocoapods.org/pods/RosettaStoneKit)
+[![Platform](https://img.shields.io/cocoapods/p/RosettaStoneKit.svg?style=flat)](http://cocoadocs.org/docsets/RosettaStoneKit)
+[![CocoaPods](https://img.shields.io/cocoapods/v/RosettaStoneKit.svg?style=flat)](https://img.shields.io/cocoapods/v/RosettaStoneKit.svg)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 ## Motivation
 

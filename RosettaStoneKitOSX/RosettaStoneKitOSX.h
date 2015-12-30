@@ -25,6 +25,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import "TargetConditionals.h"
+
+#if !TARGET_OS_IPHONE
 #import <Cocoa/Cocoa.h>
 
 FOUNDATION_EXPORT double RosettaStoneKitOSXVersionNumber;
@@ -32,3 +35,4 @@ FOUNDATION_EXPORT const unsigned char RosettaStoneKitOSXVersionString[];
 
 #import <RosettaStoneKitOSX/RosettaStone.h>
 #import <RosettaStoneKitOSX/PropertyTranslator.h>
+#endif

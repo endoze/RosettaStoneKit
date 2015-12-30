@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "RosettaStoneKit"
-  s.version      = "1.2.3"
+  s.version      = "1.2.4"
   s.summary      = "Magical Object Mapping framework for iOS/OS X"
 
   s.description  = <<-DESC

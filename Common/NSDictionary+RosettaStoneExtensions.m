@@ -24,11 +24,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "NSDictionary+Extensions.h"
+#import "NSDictionary+RosettaStoneExtensions.h"
 
-@implementation NSDictionary (Extensions)
+@implementation NSDictionary (RosettaStoneExtensions)
 
-- (BOOL)hasKey:(NSString *)targetKey
+- (BOOL)rsk_hasKey:(NSString *)targetKey
 {
   NSArray *keys = [self allKeys];
   __block BOOL result = false;

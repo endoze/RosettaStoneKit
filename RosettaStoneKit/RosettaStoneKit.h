@@ -27,7 +27,7 @@
 #import "TargetConditionals.h"
 
 #if TARGET_OS_IPHONE
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 FOUNDATION_EXPORT double RosettaStoneKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char RosettaStoneKitVersionString[];

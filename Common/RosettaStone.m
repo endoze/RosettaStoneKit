@@ -27,7 +27,7 @@
 #import "RosettaStone.h"
 #import "PropertyTranslator.h"
 #import <objc/runtime.h>
-#import "NSDictionary+Extensions.h"
+#import "NSDictionary+RosettaStoneExtensions.h"
 
 static NSDateFormatter *defaultDateFormatter;
 
@@ -112,7 +112,7 @@ static NSDateFormatter *defaultDateFormatter;
 {
   NSMutableDictionary *propertyTranslatorForClass;
   
-  if ([self.propertyTranslatorByClassString hasKey:className]) {
+  if ([self.propertyTranslatorByClassString rsk_hasKey:className]) {
     propertyTranslatorForClass = [self.propertyTranslatorByClassString objectForKey:className];
   } else {
     propertyTranslatorForClass = [NSMutableDictionary new];
@@ -169,7 +169,7 @@ static NSDateFormatter *defaultDateFormatter;
 {
   NSString *className = NSStringFromClass(klass);
   
-  if (![self.propertyMapByClassString hasKey:className]) {
+  if (![self.propertyMapByClassString rsk_hasKey:className]) {
     unsigned int propertiesCount, i;
     objc_property_t *properties = class_copyPropertyList(klass, &propertiesCount);
     NSMutableDictionary *propertyMap = [NSMutableDictionary dictionary];

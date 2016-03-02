@@ -1,14 +1,25 @@
 # Change Log
 
 ## 1.x Releases
-- `1.3.x` Releases - [1.3.0](#130)
+- `1.3.x` Releases - [1.3.0](#130) | [1.3.1](#131)
 - `1.2.x` Releases - [1.2.4](#124) | [1.2.3](#123) | [1.2.2](#122) | [1.2.1](#121) | [1.2.0](#120)
 - `1.1.x` Releases - [1.1.0](#110)
 - `1.0.x` Releases - [1.0.1](#101) | [1.0.0](#100)
 
 ---
 
-## [1.2.4](https://github.com/endoze/RosettaStoneKit/releases/tag/1.2.4)
+## [1.3.1](https://github.com/endoze/RosettaStoneKit/releases/tag/1.2.4)
+Released on 2015-03-02
+
+### Added
+
+### Updated
+- Updated NSDictionary Category to add prefixes in order to avoid naming collisions
+
+### Removed
+
+
+## [1.3.0](https://github.com/endoze/RosettaStoneKit/releases/tag/1.2.4)
 Released on 2015-01-18
 
 ### Added

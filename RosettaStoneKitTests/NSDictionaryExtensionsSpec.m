@@ -28,7 +28,7 @@
 #define EXP_SHORTHAND
 #import <Specta/Specta.h>
 #import "Expecta.h"
-#import <RosettaStoneKit/NSDictionary+Extensions.h>
+#import <RosettaStoneKit/NSDictionary+RosettaStoneExtensions.h>
 
 SpecBegin(NSDictionaryExtensions)
   describe(@"NSDictionaryExtensions", ^{
@@ -36,13 +36,13 @@ SpecBegin(NSDictionaryExtensions)
       it(@"should return true when a dictionary has a key", ^{
         NSDictionary *dictionary = @{@"key": @"value"};
         
-        expect([dictionary hasKey:@"key"]).to.beTruthy;
+        expect([dictionary rsk_hasKey:@"key"]).to.beTruthy;
       });
       
       it(@"should return false when a dictionary doesn't have a key", ^{
         NSDictionary *dictionary = @{};
         
-        expect([dictionary hasKey:@"key"]).to.beFalsy;
+        expect([dictionary rsk_hasKey:@"key"]).to.beFalsy;
       });
     });
   });

@@ -28,14 +28,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NSDictionary (Extensions)
+@interface NSDictionary (RosettaStoneExtensions)
 
 /*!
  @brief Check if a NSDictionary has a given key.
  @param targetKey - The key to test for presence.
  @return BOOL - Indicates presence of the target key in the NSDictionary.
  */
-- (BOOL)hasKey:(NSString *)targetKey;
+- (BOOL)rsk_hasKey:(NSString *)targetKey;
 
 @end
 

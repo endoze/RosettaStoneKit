@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		22D327882A755C4B2D98C83C /* libPods-RosettaStoneKitOSXTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F243BEA45C9B42B7929FE2 /* libPods-RosettaStoneKitOSXTests.a */; };
-		37297AC81A68B16A0082F082 /* NSDictionary+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 37297AC71A68B16A0082F082 /* NSDictionary+Extensions.m */; };
+		37297AC81A68B16A0082F082 /* NSDictionary+RosettaStoneExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 37297AC71A68B16A0082F082 /* NSDictionary+RosettaStoneExtensions.m */; };
 		37297ACA1A68D53A0082F082 /* NSDictionaryExtensionsSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 37297AC91A68D53A0082F082 /* NSDictionaryExtensionsSpec.m */; };
 		3762FA241AABB7AA00103947 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 3762FA231AABB7AA00103947 /* Game.m */; };
 		3762FA271AABB7DD00103947 /* TestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3762FA261AABB7DD00103947 /* TestModel.m */; };
@@ -17,7 +17,7 @@
 		378177D71A686C6500B7E87E /* RosettaStoneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 378177CB1A686C6500B7E87E /* RosettaStoneKit.framework */; };
 		378177EC1A686CA300B7E87E /* PropertyTranslator.h in Headers */ = {isa = PBXBuildFile; fileRef = 378177E71A686CA300B7E87E /* PropertyTranslator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		378177ED1A686CA300B7E87E /* PropertyTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = 378177E81A686CA300B7E87E /* PropertyTranslator.m */; };
-		378177EE1A686CA300B7E87E /* NSDictionary+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 378177E91A686CA300B7E87E /* NSDictionary+Extensions.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		378177EE1A686CA300B7E87E /* NSDictionary+RosettaStoneExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 378177E91A686CA300B7E87E /* NSDictionary+RosettaStoneExtensions.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		378177F21A68A11800B7E87E /* RosettaStoneSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 378177F11A68A11800B7E87E /* RosettaStoneSpec.m */; };
 		37C8E3FF1A7336C000A65E87 /* RosettaStoneKitOSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C8E3FE1A7336C000A65E87 /* RosettaStoneKitOSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		37C8E4051A7336C000A65E87 /* RosettaStoneKitOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C8E3FA1A7336C000A65E87 /* RosettaStoneKitOSX.framework */; };
@@ -26,10 +26,10 @@
 		37C8E4171A73382000A65E87 /* RosettaStone.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C8E4151A73382000A65E87 /* RosettaStone.m */; };
 		37C8E4181A7338B300A65E87 /* RosettaStone.m in Sources */ = {isa = PBXBuildFile; fileRef = 37C8E4151A73382000A65E87 /* RosettaStone.m */; };
 		37C8E4191A7338B300A65E87 /* PropertyTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = 378177E81A686CA300B7E87E /* PropertyTranslator.m */; };
-		37C8E41A1A7338B300A65E87 /* NSDictionary+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 37297AC71A68B16A0082F082 /* NSDictionary+Extensions.m */; };
+		37C8E41A1A7338B300A65E87 /* NSDictionary+RosettaStoneExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 37297AC71A68B16A0082F082 /* NSDictionary+RosettaStoneExtensions.m */; };
 		37C8E41B1A7338DB00A65E87 /* RosettaStone.h in Headers */ = {isa = PBXBuildFile; fileRef = 37C8E4141A73382000A65E87 /* RosettaStone.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		37C8E41C1A7338DB00A65E87 /* PropertyTranslator.h in Headers */ = {isa = PBXBuildFile; fileRef = 378177E71A686CA300B7E87E /* PropertyTranslator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		37C8E41D1A7338DB00A65E87 /* NSDictionary+Extensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 378177E91A686CA300B7E87E /* NSDictionary+Extensions.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		37C8E41D1A7338DB00A65E87 /* NSDictionary+RosettaStoneExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 378177E91A686CA300B7E87E /* NSDictionary+RosettaStoneExtensions.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		D94BB3FB00DAC78AA5924017 /* libPods-RosettaStoneKitTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE60AB60BCE7DEC858664EEC /* libPods-RosettaStoneKitTests.a */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +53,7 @@
 /* Begin PBXFileReference section */
 		217896356A380E151D44B517 /* Pods-RosettaStoneKitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RosettaStoneKitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RosettaStoneKitTests/Pods-RosettaStoneKitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		22DD8E390ED19595104FC4B1 /* Pods-RosettaStoneKitOSXTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RosettaStoneKitOSXTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RosettaStoneKitOSXTests/Pods-RosettaStoneKitOSXTests.debug.xcconfig"; sourceTree = "<group>"; };
-		37297AC71A68B16A0082F082 /* NSDictionary+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Extensions.m"; sourceTree = "<group>"; };
+		37297AC71A68B16A0082F082 /* NSDictionary+RosettaStoneExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+RosettaStoneExtensions.m"; sourceTree = "<group>"; };
 		37297AC91A68D53A0082F082 /* NSDictionaryExtensionsSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryExtensionsSpec.m; sourceTree = "<group>"; };
 		3762FA221AABB7AA00103947 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		3762FA231AABB7AA00103947 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 		378177DC1A686C6500B7E87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		378177E71A686CA300B7E87E /* PropertyTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyTranslator.h; sourceTree = "<group>"; };
 		378177E81A686CA300B7E87E /* PropertyTranslator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyTranslator.m; sourceTree = "<group>"; };
-		378177E91A686CA300B7E87E /* NSDictionary+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Extensions.h"; sourceTree = "<group>"; };
+		378177E91A686CA300B7E87E /* NSDictionary+RosettaStoneExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+RosettaStoneExtensions.h"; sourceTree = "<group>"; };
 		378177F11A68A11800B7E87E /* RosettaStoneSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RosettaStoneSpec.m; sourceTree = "<group>"; };
 		37C8E3FA1A7336C000A65E87 /* RosettaStoneKitOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RosettaStoneKitOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37C8E3FD1A7336C000A65E87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -227,8 +227,8 @@
 				37C8E4151A73382000A65E87 /* RosettaStone.m */,
 				378177E71A686CA300B7E87E /* PropertyTranslator.h */,
 				378177E81A686CA300B7E87E /* PropertyTranslator.m */,
-				378177E91A686CA300B7E87E /* NSDictionary+Extensions.h */,
-				37297AC71A68B16A0082F082 /* NSDictionary+Extensions.m */,
+				378177E91A686CA300B7E87E /* NSDictionary+RosettaStoneExtensions.h */,
+				37297AC71A68B16A0082F082 /* NSDictionary+RosettaStoneExtensions.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -263,7 +263,7 @@
 				378177D11A686C6500B7E87E /* RosettaStoneKit.h in Headers */,
 				378177EC1A686CA300B7E87E /* PropertyTranslator.h in Headers */,
 				37C8E4161A73382000A65E87 /* RosettaStone.h in Headers */,
-				378177EE1A686CA300B7E87E /* NSDictionary+Extensions.h in Headers */,
+				378177EE1A686CA300B7E87E /* NSDictionary+RosettaStoneExtensions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +274,7 @@
 				37C8E3FF1A7336C000A65E87 /* RosettaStoneKitOSX.h in Headers */,
 				37C8E41B1A7338DB00A65E87 /* RosettaStone.h in Headers */,
 				37C8E41C1A7338DB00A65E87 /* PropertyTranslator.h in Headers */,
-				37C8E41D1A7338DB00A65E87 /* NSDictionary+Extensions.h in Headers */,
+				37C8E41D1A7338DB00A65E87 /* NSDictionary+RosettaStoneExtensions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +308,7 @@
 				378177D31A686C6500B7E87E /* Frameworks */,
 				378177D41A686C6500B7E87E /* Resources */,
 				D4EF8F59F264416BC57D03C2 /* Copy Pods Resources */,
+				ACFEE29E3E9B7BB62F6CCC3C /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -346,6 +347,7 @@
 				37C8E4011A7336C000A65E87 /* Frameworks */,
 				37C8E4021A7336C000A65E87 /* Resources */,
 				CD670ECB0A99D41436EBB19A /* Copy Pods Resources */,
+				B686242F573E82EF12D76EFE /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -368,7 +370,6 @@
 				TargetAttributes = {
 					378177CA1A686C6500B7E87E = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = 73F275G5EB;
 					};
 					378177D51A686C6500B7E87E = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -448,6 +449,36 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		ACFEE29E3E9B7BB62F6CCC3C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RosettaStoneKitTests/Pods-RosettaStoneKitTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B686242F573E82EF12D76EFE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RosettaStoneKitOSXTests/Pods-RosettaStoneKitOSXTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B7000E251797C21CF719EE9F /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -501,7 +532,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				378177ED1A686CA300B7E87E /* PropertyTranslator.m in Sources */,
-				37297AC81A68B16A0082F082 /* NSDictionary+Extensions.m in Sources */,
+				37297AC81A68B16A0082F082 /* NSDictionary+RosettaStoneExtensions.m in Sources */,
 				37C8E4171A73382000A65E87 /* RosettaStone.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,7 +555,7 @@
 			files = (
 				37C8E4181A7338B300A65E87 /* RosettaStone.m in Sources */,
 				37C8E4191A7338B300A65E87 /* PropertyTranslator.m in Sources */,
-				37C8E41A1A7338B300A65E87 /* NSDictionary+Extensions.m in Sources */,
+				37C8E41A1A7338B300A65E87 /* NSDictionary+RosettaStoneExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,10 +708,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 217896356A380E151D44B517 /* Pods-RosettaStoneKitTests.debug.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -696,10 +724,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ACC6D0C0D05E780F80FF387C /* Pods-RosettaStoneKitTests.release.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = RosettaStoneKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cstephan.$(PRODUCT_NAME:rfc1034identifier)";

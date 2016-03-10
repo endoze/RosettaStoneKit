@@ -1,12 +1,24 @@
 # Change Log
 
 ## 1.x Releases
+- `1.4.0` Releases - [1.4.0](#140)
 - `1.3.x` Releases - [1.3.0](#130) | [1.3.1](#131)
 - `1.2.x` Releases - [1.2.4](#124) | [1.2.3](#123) | [1.2.2](#122) | [1.2.1](#121) | [1.2.0](#120)
 - `1.1.x` Releases - [1.1.0](#110)
 - `1.0.x` Releases - [1.0.1](#101) | [1.0.0](#100)
 
 ---
+## [1.4.0](https://github.com/endoze/RosettaStoneKit/releases/tag/1.2.4)
+Released on 2015-03-10
+
+### Added
+
+### Updated
+- Changed APPLICATION_EXTENSION_API_ONLY build setting from NO to YES.
+
+### Removed
+
+
 
 ## [1.3.1](https://github.com/endoze/RosettaStoneKit/releases/tag/1.2.4)
 Released on 2015-03-02

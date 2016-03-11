@@ -1,6 +1,11 @@
 language: objective-c
 osx_image: xcode7
-before_install: rvm use $RVM_RUBY_VERSION
+xcode_workspace: RosettaStoneKit.xcworkspace
+xcode_scheme: RosettaStoneKit
+xcode_sdk: iphonesimulator
+
+before_install:
+  - rvm use $RVM_RUBY_VERSION
+
 install: bundle install --without=documentation --path ../travis_bundle_dir
 after_success: bundle exec slather
-script: script/ci

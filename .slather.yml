@@ -1,6 +1,8 @@
+ci_service: travis_ci
 coverage_service: coveralls
 xcodeproj: RosettaStoneKit.xcodeproj
 scheme: RosettaStoneKit
+source_directory: Common
 ignore:
   - Pods/*
   - ../*

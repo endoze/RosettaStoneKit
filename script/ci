@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 xcodebuild -configuration "Debug" \
-           -destination "name=iPhone 5,OS=9.0" \
+           -destination "name=iPhone 5,OS=9.2" \
            -scheme "RosettaStoneKit" \
            -workspace "RosettaStoneKit.xcworkspace" \
            build test | \
@@ -11,3 +11,5 @@ xcodebuild -configuration "Debug" \
            --screenshots \
            --report junit \
            --output "build/reports/test-report.xml"
+
+bundle exec slather coverage -v

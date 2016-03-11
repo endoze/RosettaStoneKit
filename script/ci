@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 
-export OBJROOT="$PWD/build"
-export SYMROOT="$PWD/build"
-
 xcodebuild -configuration "Debug" \
-           -destination "name=iPhone 5,OS=9.2" \
+           -destination "name=iPhone 5,OS=9.0" \
            -scheme "RosettaStoneKit" \
            -workspace "RosettaStoneKit.xcworkspace" \
            build test | \

@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+xcodebuild -configuration "Debug" \
+           -destination "name=iPhone 5,OS=9.0" \
+           -scheme "RosettaStoneKit" \
+           -workspace "RosettaStoneKit.xcworkspace" \
+           build test | \
+  xcpretty --color \
+           --report html \
+           --output "build/reports/test-report.html" \
+           --screenshots \
+           --report junit \
+           --output "build/reports/test-report.xml"

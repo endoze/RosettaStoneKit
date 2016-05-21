@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites tests='23' failures='0'>
+  <testsuite name='NSDictionaryExtensionsSpec' tests='2' failures='0'>
+    <testcase classname='NSDictionaryExtensionsSpec' name='test_NSDictionaryExtensions__hasKey__should_return_true_when_a_dictionary_has_a_key' time='0.002'/>
+    <testcase classname='NSDictionaryExtensionsSpec' name='test_NSDictionaryExtensions__hasKey__should_return_false_when_a_dictionary_doesnt_have_a_key' time='0.000'/>
+  </testsuite>
+  <testsuite name='RosettaStoneSpecSpec' tests='21' failures='0'>
+    <testcase classname='RosettaStoneSpecSpec' name='test_RosettaStone__sharedInstance__should_always_return_the_same_instance' time='0.000'/>
+    <testcase classname='RosettaStoneSpecSpec' name='test_RosettaStone__registerCase__should_register_a_PropertyTranslator_under_a_specific_classNamepropertyName' time='0.000'/>
+    <testcase classname='RosettaStoneSpecSpec' name='test_RosettaStone__translatetoClass__should_pass_back_an_instance_of_the_specified_class' time='0.001'/>
+    <testcase classname='RosettaStoneSpecSpec' name='test_RosettaStone__translatetoClass__should_have_the_name_and_ID_properties_set' time='0.000'/>
+    <testcase classname='RosettaStoneSpecSpec' name='test_RosettaStone__translatetoClass__should_resolve_nested_objects_recursively' time='0.000'/>
+    <testcase classname='RosettaStoneSpecSpec' name='test_RosettaStone__translatetoClass__should_support_arrays_of_custom_objects' time='0.000'/>
+    <testcase classname='RosettaStoneSpecSpec' name='test_RosettaStone__translatetoClass__should_translate_dates_from_strings' time='0.001'/>
+    <testcase classname='RosettaStoneSpecSpec' name='test_RosettaStone__translateToDictionary__should_pass_back_an_instance_of_NSDictionary' time='0.000'/>
+    <testcase classname='RosettaStoneSpecSpec' name='test_RosettaStone__translateToDictionary__should_have_the_name_and_id_properties_set' time='0.000'/>
+    <testcase classname='RosettaStoneSpecSpec' name='test_RosettaStone__translateToDictionary__should_resolve_nested_objects_recursively' time='0.000'/>
+    <testcase classname='RosettaStoneSpecSpec' name='test_RosettaStone__translateToDictionary__should_support_arrays_of_custom_objects' time='0.000'/>
+    <testcase classname='RosettaStoneSpecSpec' name='test_RosettaStone__translateToDictionary__should_translate_dates_to_strings' time='0.001'/>
+    <testcase classname='RosettaStoneSpecSpec' name='test_RosettaStone__classOfProperty__should_return_TestModel_for_a_TestModel_property' time='0.000'/>
+    <testcase classname='RosettaStoneSpecSpec' name='test_RosettaStone__classOfProperty__should_return_NSNumber_for_an_integer_property' time='0.000'/>
+    <testcase classname='RosettaStoneSpecSpec' name='test_RosettaStone__classOfProperty__should_return_NSNumber_for_a_double_property' time='0.000'/>
+    <testcase classname='RosettaStoneSpecSpec' name='test_RosettaStone__classOfProperty__should_return_NSNumber_for_a_float_property' time='0.000'/>
+    <testcase classname='RosettaStoneSpecSpec' name='test_RosettaStone__classOfProperty__should_return_NSNumber_for_a_BOOL_property' time='0.000'/>
+    <testcase classname='RosettaStoneSpecSpec' name='test_RosettaStone__propertyMapForClass__should_return_a_dictionary_with_the_correct_property_names_and_property_classes' time='0.000'/>
+    <testcase classname='RosettaStoneSpecSpec' name='test_RosettaStone__propertyMapForClass__should_return_a_cached_copy_of_a_property_map_for_a_class_its_already_translated' time='0.001'/>
+    <testcase classname='RosettaStoneSpecSpec' name='test_RosettaStone__dateFormatter__should_return_the_default_formatter_if_one_hasnt_been_set' time='0.000'/>
+    <testcase classname='RosettaStoneSpecSpec' name='test_RosettaStone__dateFormatter__should_return_the_formatter_when_the_proeprty_is_set' time='0.001'/>
+  </testsuite>
+</testsuites>

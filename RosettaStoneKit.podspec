@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = "9.0"
 
   s.source       = {git: "https://github.com/endoze/RosettaStoneKit.git", tag: "#{s.version}"}
-  s.source_files  = "Common", "Common/**/*.{h,m}", "RosettaStoneKit/RosettaStoneKit.h", "RosettaStoneKitOSX/RosettaStoneKitOSX.h"
+  s.source_files  = "Common", "Common/**/*.{h,m}", "RosettaStoneKit/RosettaStoneKit.h"
 
   s.requires_arc = true
 end

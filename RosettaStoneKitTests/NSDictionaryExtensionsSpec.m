@@ -28,7 +28,8 @@
 #define EXP_SHORTHAND
 #import <Specta/Specta.h>
 #import "Expecta.h"
-#import <RosettaStoneKit/NSDictionary+RosettaStoneExtensions.h>
+
+#import "NSDictionary+RosettaStoneExtensions.h"
 
 SpecBegin(NSDictionaryExtensions)
   describe(@"NSDictionaryExtensions", ^{

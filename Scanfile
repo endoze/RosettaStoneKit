@@ -1,0 +1,8 @@
+# vim: ft=ruby
+#
+
+scheme "RosettaStoneKit"
+workspace "RosettaStoneKit.xcworkspace"
+open_report false
+clean true
+code_coverage true

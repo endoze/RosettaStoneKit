@@ -1,7 +1,7 @@
 # Change Log
 
 ## 1.x Releases
-- `1.5.0` Releases - [1.5.0](#150)
+- `1.5.0` Releases - [1.5.0](#150) | [1.5.1](#151)
 - `1.4.0` Releases - [1.4.0](#140)
 - `1.3.x` Releases - [1.3.0](#130) | [1.3.1](#131)
 - `1.2.x` Releases - [1.2.4](#124) | [1.2.3](#123) | [1.2.2](#122) | [1.2.1](#121) | [1.2.0](#120)
@@ -9,6 +9,17 @@
 - `1.0.x` Releases - [1.0.1](#101) | [1.0.0](#100)
 
 ---
+## [1.5.1](https://github.com/endoze/RosettaStoneKit/releases/tag/1.5.0)
+Released on 2015-05-23
+
+### Added
+
+### Updated
+- Podspec source files to include library files
+
+### Removed
+
+
 ## [1.5.0](https://github.com/endoze/RosettaStoneKit/releases/tag/1.5.0)
 Released on 2015-05-22
 

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "RosettaStoneKit"
-  s.version      = "1.5.0"
+  s.version      = "1.5.1"
   s.summary      = "Magical Object Mapping framework for iOS/OS X"
 
   s.description  = <<-DESC
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = "9.0"
 
   s.source       = {git: "https://github.com/endoze/RosettaStoneKit.git", tag: "#{s.version}"}
-  s.source_files  = "Common", "Common/**/*.{h,m}", "RosettaStoneKit/RosettaStoneKit.h"
+  s.source_files  = "RosettaStoneKit/**/*.{h,m}"
 
   s.requires_arc = true
 end

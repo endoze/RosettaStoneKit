@@ -1,0 +1,6 @@
+framework module Pods_RosettaStoneKit {
+  umbrella header "Pods-RosettaStoneKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

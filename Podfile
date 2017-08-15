@@ -5,10 +5,12 @@ inhibit_all_warnings!
 use_frameworks!
 
 target 'RosettaStoneKit' do
+
+  target 'RosettaStoneKitTests' do
+    platform :osx, '10.11'
+
+    pod 'Specta'
+    pod 'Expecta'
+  end
 end
 
-target 'RosettaStoneKitTests' do
-  platform :osx, '10.11'
-  pod 'Specta'
-  pod 'Expecta'
-end

@@ -30,7 +30,8 @@
       .test.passing { background-color: #CAF59F;}
       .test.failing.odd { background-color: #EEC7CC;}
       .test.passing.odd { background-color: #E5FBCF;}
-      .details { background-color: #F4DDE0; border: 1px solid #C84F5E;}
+      .details.failing { background-color: #F4DDE0; border: 1px solid #C84F5E;}
+      .details.passing { background-color: #E5F4DC; border: 1px solid #A1D761;}
       .test .test-detail:last-child { padding-bottom: 8px;}
       .test .title { float: left; font-size: 0.9em; margin-top: 8px; font-family: Menlo, Monaco, monospace;}
       .test .time { float: left;margin: 4px 10px 0 20px;}
@@ -109,7 +110,7 @@
       </section>
       <section class="right">
         <section id="counters">
-          <h2 id="test-count"><span class="number">23</span> tests</h2>
+          <h2 id="test-count"><span class="number">27</span> tests</h2>
           
         </section>
         <section id="segment-bar">
@@ -125,14 +126,13 @@
             <h3 class="title">NSDictionaryExtensionsSpec</h3>
           </section>
           <section class="tests">
-            
             <table>
             
               
               <tr class="test passing "  onclick="toggleDetails('test_NSDictionaryExtensions__hasKey__should_return_true_when_a_dictionary_has_a_key');">
                 <td>
                   
-                    <h3 class="time">0.002s</h3>
+                    <h3 class="time">0.249s</h3>
                   
                 </td>
                 <td><h3 class="title">test_NSDictionaryExtensions__hasKey__should_return_true_when_a_dictionary_has_a_key</h3></td>
@@ -143,7 +143,7 @@
               <tr class="test passing odd"  onclick="toggleDetails('test_NSDictionaryExtensions__hasKey__should_return_false_when_a_dictionary_doesnt_have_a_key');">
                 <td>
                   
-                    <h3 class="time">0.000s</h3>
+                    <h3 class="time">0.001s</h3>
                   
                 </td>
                 <td><h3 class="title">test_NSDictionaryExtensions__hasKey__should_return_false_when_a_dictionary_doesnt_have_a_key</h3></td>
@@ -160,14 +160,13 @@
             <h3 class="title">RosettaStoneSpecSpec</h3>
           </section>
           <section class="tests">
-            
             <table>
             
               
               <tr class="test passing "  onclick="toggleDetails('test_RosettaStone__sharedInstance__should_always_return_the_same_instance');">
                 <td>
                   
-                    <h3 class="time">0.000s</h3>
+                    <h3 class="time">0.001s</h3>
                   
                 </td>
                 <td><h3 class="title">test_RosettaStone__sharedInstance__should_always_return_the_same_instance</h3></td>
@@ -178,7 +177,7 @@
               <tr class="test passing odd"  onclick="toggleDetails('test_RosettaStone__registerCase__should_register_a_PropertyTranslator_under_a_specific_classNamepropertyName');">
                 <td>
                   
-                    <h3 class="time">0.000s</h3>
+                    <h3 class="time">0.001s</h3>
                   
                 </td>
                 <td><h3 class="title">test_RosettaStone__registerCase__should_register_a_PropertyTranslator_under_a_specific_classNamepropertyName</h3></td>
@@ -200,7 +199,7 @@
               <tr class="test passing odd"  onclick="toggleDetails('test_RosettaStone__translatetoClass__should_have_the_name_and_ID_properties_set');">
                 <td>
                   
-                    <h3 class="time">0.000s</h3>
+                    <h3 class="time">0.001s</h3>
                   
                 </td>
                 <td><h3 class="title">test_RosettaStone__translatetoClass__should_have_the_name_and_ID_properties_set</h3></td>
@@ -211,7 +210,7 @@
               <tr class="test passing "  onclick="toggleDetails('test_RosettaStone__translatetoClass__should_resolve_nested_objects_recursively');">
                 <td>
                   
-                    <h3 class="time">0.000s</h3>
+                    <h3 class="time">0.001s</h3>
                   
                 </td>
                 <td><h3 class="title">test_RosettaStone__translatetoClass__should_resolve_nested_objects_recursively</h3></td>
@@ -222,7 +221,7 @@
               <tr class="test passing odd"  onclick="toggleDetails('test_RosettaStone__translatetoClass__should_support_arrays_of_custom_objects');">
                 <td>
                   
-                    <h3 class="time">0.000s</h3>
+                    <h3 class="time">0.001s</h3>
                   
                 </td>
                 <td><h3 class="title">test_RosettaStone__translatetoClass__should_support_arrays_of_custom_objects</h3></td>
@@ -233,7 +232,7 @@
               <tr class="test passing "  onclick="toggleDetails('test_RosettaStone__translatetoClass__should_translate_dates_from_strings');">
                 <td>
                   
-                    <h3 class="time">0.001s</h3>
+                    <h3 class="time">0.002s</h3>
                   
                 </td>
                 <td><h3 class="title">test_RosettaStone__translatetoClass__should_translate_dates_from_strings</h3></td>
@@ -241,10 +240,32 @@
               
             
               
+              <tr class="test passing odd"  onclick="toggleDetails('test_RosettaStone__translatetoClass__should_handle_null_values_for_object_types');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_RosettaStone__translatetoClass__should_handle_null_values_for_object_types</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing "  onclick="toggleDetails('test_RosettaStone__translatetoClass__should_handle_null_values_for_array_types');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_RosettaStone__translatetoClass__should_handle_null_values_for_array_types</h3></td>
+              </tr>
+              
+            
+              
               <tr class="test passing odd"  onclick="toggleDetails('test_RosettaStone__translateToDictionary__should_pass_back_an_instance_of_NSDictionary');">
                 <td>
                   
-                    <h3 class="time">0.000s</h3>
+                    <h3 class="time">0.001s</h3>
                   
                 </td>
                 <td><h3 class="title">test_RosettaStone__translateToDictionary__should_pass_back_an_instance_of_NSDictionary</h3></td>
@@ -255,7 +276,7 @@
               <tr class="test passing "  onclick="toggleDetails('test_RosettaStone__translateToDictionary__should_have_the_name_and_id_properties_set');">
                 <td>
                   
-                    <h3 class="time">0.000s</h3>
+                    <h3 class="time">0.001s</h3>
                   
                 </td>
                 <td><h3 class="title">test_RosettaStone__translateToDictionary__should_have_the_name_and_id_properties_set</h3></td>
@@ -266,7 +287,7 @@
               <tr class="test passing odd"  onclick="toggleDetails('test_RosettaStone__translateToDictionary__should_resolve_nested_objects_recursively');">
                 <td>
                   
-                    <h3 class="time">0.000s</h3>
+                    <h3 class="time">0.001s</h3>
                   
                 </td>
                 <td><h3 class="title">test_RosettaStone__translateToDictionary__should_resolve_nested_objects_recursively</h3></td>
@@ -277,7 +298,7 @@
               <tr class="test passing "  onclick="toggleDetails('test_RosettaStone__translateToDictionary__should_support_arrays_of_custom_objects');">
                 <td>
                   
-                    <h3 class="time">0.000s</h3>
+                    <h3 class="time">0.001s</h3>
                   
                 </td>
                 <td><h3 class="title">test_RosettaStone__translateToDictionary__should_support_arrays_of_custom_objects</h3></td>
@@ -296,10 +317,32 @@
               
             
               
+              <tr class="test passing "  onclick="toggleDetails('test_RosettaStone__translateToDictionary__should_handle_nil_property_values');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_RosettaStone__translateToDictionary__should_handle_nil_property_values</h3></td>
+              </tr>
+              
+            
+              
+              <tr class="test passing odd"  onclick="toggleDetails('test_RosettaStone__translateToDictionary__should_handle_nil_array_property_values');">
+                <td>
+                  
+                    <h3 class="time">0.001s</h3>
+                  
+                </td>
+                <td><h3 class="title">test_RosettaStone__translateToDictionary__should_handle_nil_array_property_values</h3></td>
+              </tr>
+              
+            
+              
               <tr class="test passing "  onclick="toggleDetails('test_RosettaStone__classOfProperty__should_return_TestModel_for_a_TestModel_property');">
                 <td>
                   
-                    <h3 class="time">0.000s</h3>
+                    <h3 class="time">0.001s</h3>
                   
                 </td>
                 <td><h3 class="title">test_RosettaStone__classOfProperty__should_return_TestModel_for_a_TestModel_property</h3></td>
@@ -310,7 +353,7 @@
               <tr class="test passing odd"  onclick="toggleDetails('test_RosettaStone__classOfProperty__should_return_NSNumber_for_an_integer_property');">
                 <td>
                   
-                    <h3 class="time">0.000s</h3>
+                    <h3 class="time">0.001s</h3>
                   
                 </td>
                 <td><h3 class="title">test_RosettaStone__classOfProperty__should_return_NSNumber_for_an_integer_property</h3></td>
@@ -321,7 +364,7 @@
               <tr class="test passing "  onclick="toggleDetails('test_RosettaStone__classOfProperty__should_return_NSNumber_for_a_double_property');">
                 <td>
                   
-                    <h3 class="time">0.000s</h3>
+                    <h3 class="time">0.001s</h3>
                   
                 </td>
                 <td><h3 class="title">test_RosettaStone__classOfProperty__should_return_NSNumber_for_a_double_property</h3></td>
@@ -332,7 +375,7 @@
               <tr class="test passing odd"  onclick="toggleDetails('test_RosettaStone__classOfProperty__should_return_NSNumber_for_a_float_property');">
                 <td>
                   
-                    <h3 class="time">0.000s</h3>
+                    <h3 class="time">0.001s</h3>
                   
                 </td>
                 <td><h3 class="title">test_RosettaStone__classOfProperty__should_return_NSNumber_for_a_float_property</h3></td>
@@ -354,7 +397,7 @@
               <tr class="test passing odd"  onclick="toggleDetails('test_RosettaStone__propertyMapForClass__should_return_a_dictionary_with_the_correct_property_names_and_property_classes');">
                 <td>
                   
-                    <h3 class="time">0.000s</h3>
+                    <h3 class="time">0.001s</h3>
                   
                 </td>
                 <td><h3 class="title">test_RosettaStone__propertyMapForClass__should_return_a_dictionary_with_the_correct_property_names_and_property_classes</h3></td>
@@ -376,7 +419,7 @@
               <tr class="test passing odd"  onclick="toggleDetails('test_RosettaStone__dateFormatter__should_return_the_default_formatter_if_one_hasnt_been_set');">
                 <td>
                   
-                    <h3 class="time">0.000s</h3>
+                    <h3 class="time">0.001s</h3>
                   
                 </td>
                 <td><h3 class="title">test_RosettaStone__dateFormatter__should_return_the_default_formatter_if_one_hasnt_been_set</h3></td>

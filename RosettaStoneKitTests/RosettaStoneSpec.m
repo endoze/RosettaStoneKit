@@ -107,6 +107,22 @@ SpecBegin(RosettaStoneSpec)
         Game *game = [stone translate:gameDictionary toClass:[Game class]];
         expect([game date]).to.equal(date);
       });
+      
+      it(@"should handle null values for object types", ^{
+        RosettaStone *stone = [RosettaStone sharedInstance];
+        NSDictionary *userDictionary = @{@"testModel": [NSNull null]};
+        TestUser *user = [stone translate:userDictionary toClass:[TestUser class]];
+        expect([user testModel]).to.equal(nil);
+      });
+      
+      it(@"should handle null values for array types", ^{
+        RosettaStone *stone = [RosettaStone sharedInstance];
+        PropertyTranslator *collectionTranslator = [PropertyTranslator propertyTranslatorForClass:[TestUser class] fromArrayKey:@"games" toArrayProperty:@"games" withClass:[Game class]];
+        [stone registerPropertyTranslator:collectionTranslator];
+        NSDictionary *userDictionary = @{@"games": [NSNull null]};
+        TestUser *user = [stone translate:userDictionary toClass:[TestUser class]];
+        expect([user games]).to.equal(@[]);
+      });
     });
     
     describe(@"translateToDictionary:", ^{
@@ -188,6 +204,25 @@ SpecBegin(RosettaStoneSpec)
         game.gameId = @25;
         NSDictionary *gameDictionary = [stone translateToDictionary:game];
         expect([gameDictionary objectForKey:@"date"]).to.equal([dateFormatter stringFromDate:now]);
+      });
+      
+      it(@"should handle nil property values", ^{
+        RosettaStone *stone = [RosettaStone sharedInstance];
+        NSDate *now = [NSDate new];
+        NSDateFormatter *dateFormatter = [NSDateFormatter new];
+        [dateFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"];
+        Game *game = [Game new];
+        game.date = now;
+        game.gameId = @25;
+        NSDictionary *gameDictionary = [stone translateToDictionary:game];
+        expect([gameDictionary objectForKey:@"name"]).to.equal(nil);
+      });
+      
+      it(@"should handle nil array property values", ^{
+        RosettaStone *stone = [RosettaStone sharedInstance];
+        TestUser *user = [TestUser new];
+        NSDictionary *userDictionary = [stone translateToDictionary:user];
+        expect(userDictionary[@"games"]).to.equal(@[]);
       });
     });
     

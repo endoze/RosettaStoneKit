@@ -256,7 +256,9 @@ static NSDateFormatter *defaultDateFormatter;
       Class keyClass = [propertyValue class];
     
       if (propertyValue) {
-        if ([keyClass isSubclassOfClass:[NSDate class]]) {
+        if ([keyClass isEqual:[NSNull class]]) {
+          [dictionary setValue:nil forKey:propertyName];
+        } else if ([keyClass isSubclassOfClass:[NSDate class]]) {
           NSDate *date = (NSDate *)propertyValue;
           NSString *dateString = [[self dateFormatter] stringFromDate:date];
           

@@ -3,6 +3,7 @@
 
 scheme "RosettaStoneKit"
 workspace "RosettaStoneKit.xcworkspace"
+destination "platform=macOS"
 open_report false
 clean true
 code_coverage true

@@ -44,6 +44,8 @@
                                  withClass:(Class)arrayClass
 {
   ValueInterpolatorBlock defaultArrayBlock = ^(NSArray *array){
+    if ([array isEqual:[NSNull null]]) { return @[]; }
+    
     NSMutableArray *results = [[NSMutableArray alloc] initWithCapacity:[array count]];
     RosettaStone *stone = [RosettaStone sharedInstance];
     
@@ -52,10 +54,12 @@
       [results addObject:translatedObject];
     }
     
-    return [results copy];
+    return (NSArray *)[results copy];
   };
   
   ValueInterpolatorBlock defaultReverseArrayBlock = ^(NSArray *array){
+    if ([array isEqual:[NSNull null]]) { return @[]; }
+    
     NSMutableArray *results = [[NSMutableArray alloc] initWithCapacity:[array count]];
     RosettaStone *stone = [RosettaStone sharedInstance];
     
@@ -64,7 +68,7 @@
       [results addObject:translatedObject];
     }
     
-    return [results copy];
+    return (NSArray *)[results copy];
   };
   
   return [self propertyTranslatorForClass:klass fromKey:arrayKey toProperty:arrayPropertyName withInterpolatorBlock:defaultArrayBlock andReverseInterpolatorBlock:defaultReverseArrayBlock];

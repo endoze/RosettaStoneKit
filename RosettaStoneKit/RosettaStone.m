@@ -217,8 +217,9 @@ static NSDateFormatter *defaultDateFormatter;
       Class keyClass = [propertyValue class];
     
       if (propertyValue) {
-        if ([propertyClass isSubclassOfClass:[NSDate class]] && ![propertyValue isEqual:[NSNull null]]) {
-          NSString *dateString = [dictionary valueForKey:propertyName];
+        if ([keyClass isEqual:[NSNull class]]) {
+          [object setValue:nil forKey: propertyName];
+        } else if ([propertyClass isSubclassOfClass:[NSDate class]] && ![propertyValue isEqual:[NSNull null]]) {          NSString *dateString = [dictionary valueForKey:propertyName];
           NSDate *date = [[self dateFormatter] dateFromString:dateString];
           
           [object setValue:date forKey:propertyName];
@@ -256,7 +257,9 @@ static NSDateFormatter *defaultDateFormatter;
       Class keyClass = [propertyValue class];
     
       if (propertyValue) {
-        if ([keyClass isSubclassOfClass:[NSDate class]]) {
+        if ([keyClass isEqual:[NSNull class]]) {
+          [dictionary setValue:nil forKey:propertyName];
+        } else if ([keyClass isSubclassOfClass:[NSDate class]]) {
           NSDate *date = (NSDate *)propertyValue;
           NSString *dateString = [[self dateFormatter] stringFromDate:date];
           

@@ -44,8 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /*!
  @brief Register a new property translator with RosettaStone.
- @param propertyTranslater - The property translator you'd like to register with Rosetta Stone.
- @return void
+ @param propertyTranslator - The property translator you'd like to register with Rosetta Stone.
  */
 - (void)registerPropertyTranslator:(PropertyTranslator *)propertyTranslator;
 
